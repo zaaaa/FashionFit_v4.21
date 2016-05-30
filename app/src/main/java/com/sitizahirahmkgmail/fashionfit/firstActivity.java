@@ -1,5 +1,6 @@
 package com.sitizahirahmkgmail.fashionfit;
 
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -23,6 +25,9 @@ public class firstActivity extends AppCompatActivity {
 
     //declaring variables
     String gender="";
+    private EditText username;
+    private EditText password;
+    private Button start;
     public void pickGender(View view) {
         ImageView img = (ImageView) findViewById(R.id.imageView);
 
@@ -31,26 +36,22 @@ public class firstActivity extends AppCompatActivity {
             gender="male";
         }
         else if (view.getId()== R.id.female){
-            img.setImageResource(R.drawable.fashionfit_icon2);
+            img.setImageResource(R.drawable.faashionfit_icon1);
             gender="female";
         }
 
     }
-    //storing user information
-    //String [] userArray= new String[2];
-    //retrieving login values
-    EditText username = (EditText)findViewById(R.id.username);
-    EditText password = (EditText)findViewById(R.id.password);
-    String user = username.getText().toString();
-    String pwd = password.getText().toString();
-    public void login(View view) {
+
+    //String user = username.getText().toString();
+   // String pwd = password.getText().toString();
+   /* public void login(View view) {
         if (user != null && pwd != null) {
             Toast.makeText(this, user, Toast.LENGTH_SHORT).show();
 
         } else {
             Toast.makeText(this, "No input", Toast.LENGTH_SHORT).show();
         }
-    }
+    }*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +65,11 @@ public class firstActivity extends AppCompatActivity {
         mpstart.setLooping(true);
         mpstart.start();
 
+        //storing user information
+        //retrieving login values
+        username = (EditText)findViewById(R.id.username);
+        password = (EditText)findViewById(R.id.password);
+
        /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +79,16 @@ public class firstActivity extends AppCompatActivity {
             }
         });*/
     }
+    public void login(View v) {
 
+            String name = username.getText().toString().trim().toLowerCase();
+            String pass = password.getText().toString().trim().toLowerCase();
+            String [] user_details={name,pass,gender};
+            Intent nextActivity= new Intent(firstActivity.this, secondActivity.class);
+            nextActivity.putExtra( "user", user_details);
+            startActivity(nextActivity);
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

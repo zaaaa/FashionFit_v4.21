@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">FashionFit</string>
     <string name="action_settings">Settings</string>
+    <string name="lbl1">Select Account Type</string>
+    <string name="lbl2">Select Account Head</string>
+
+    <string-array name="select_type">
+        <item>Top</item>
+        <item>Bottom</item>
+        <item>Shoes</item>
+        <item>Accessories</item>
+    </string-array>
 </resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.sitizahirahmkgmail.fashionfit.outfitcheckActivity">
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TableRow>
+        <TextView
+            android:text="Top"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <TextView
+        android:text="Bottom"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </TableRow>
+    <TableRow>
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:id="@+id/imageTop"
+            android:src="@drawable/top"
+            />
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:id="@+id/imageBottom"
+            android:src="@drawable/bottom"
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_margin="10dp"
+            android:text="Shoes"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <TextView
+            android:layout_margin="10dp"
+            android:text="Accessories"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </TableRow>
+    <TableRow>
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:id="@+id/imageAcc"
+            android:src="@drawable/shoes"
+            />
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:id="@+id/imageShoes"
+            android:src="@drawable/accessories"
+            />
+    </TableRow>
+
+    <TextView
+        android:background="@drawable/back"
+        android:layout_margin="10dp"
+        android:layout_width="280dp"
+        android:id="@+id/msg"
+        android:text="\nOccasion: Formal\nSimple and Classic!
+Suitable for presentations, meetings and formal events."/>
+
+</TableLayout>
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="Got It!"
+        android:onClick="Mmenu"
+        android:id="@+id/button"/>
+</RelativeLayout>

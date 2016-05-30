@@ -22,27 +22,27 @@
         android:layout_alignParentTop="true"
         android:id="@+id/Title"
         />
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:src="@drawable/fashionfit_icon2"
+        android:src="@drawable/faashionfit_icon1"
         android:layout_below="@+id/Title"
         android:layout_centerHorizontal="true"
-        android:scaleType="fitXY"
         android:layout_marginTop="16dp"/>
     <EditText
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Enter your name here..."
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:focusable="true"
         android:textColorHighlight="#ffcccc"
         android:textColorHint="#666666"
         android:layout_marginTop="16dp"
-        android:layout_centerInParent="true"
         android:layout_below="@+id/imageView"
+        android:layout_centerInParent="true"
         android:typeface="monospace"
         />
     <EditText
@@ -52,11 +52,11 @@
         android:inputType="textPassword"
         android:layout_below="@+id/username"
         android:hint="Enter your password here..."
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:focusable="true"
         android:textColorHighlight="#ffcccc"
         android:textColorHint="#666666"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:layout_centerInParent="true"/>
     <TextView
         android:layout_width="wrap_content"
@@ -73,6 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
         android:layout_below="@+id/label"
         android:id="@+id/gender"
         >
@@ -99,5 +100,6 @@
         android:layout_below="@+id/gender"
         android:text="Start"
         android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
         />
 </RelativeLayout>

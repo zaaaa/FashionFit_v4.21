@@ -3,6 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.sitizahirahmkgmail.fashionfit.firstActivity">
     <item
+        android:id="@+id/activity2"
+        android:orderInCategory="100"
+        android:title="Add Collection" />
+    <item
+        android:id="@+id/activity3"
+        android:orderInCategory="100"
+        android:title="Mix 'n' Match" />
+    <item
+        android:id="@+id/activity4"
+        android:orderInCategory="100"
+        android:title="My Diary" />
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"

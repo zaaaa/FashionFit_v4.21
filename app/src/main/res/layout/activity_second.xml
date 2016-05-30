@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.sitizahirahmkgmail.fashionfit.secondActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Add Collection"
+        android:id="@+id/textView2"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        />
+
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner1"
+        android:layout_below="@+id/textView2"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:entries="@array/select_type"
+    />
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner2"
+        android:layout_below="@+id/spinner1"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:src="@drawable/camera"
+        android:layout_below="@+id/spinner2"
+        android:layout_alignStart="@+id/button"
+        android:layout_marginTop="10dp"
+        android:onClick="takePictureIntent"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gallery"
+        android:layout_marginTop="10dp"
+        android:id="@+id/button"
+        android:layout_below="@+id/imageButton"
+        android:layout_centerInParent="true"
+        android:onClick="gallery"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/top"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="12dp"
+        android:onClick="galleryButton"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image preview"
+        android:layout_below="@+id/imageView"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/button2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="saveButton"/>
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/imageView2"-->
+        <!--android:src="@drawable/pants"-->
+
+        <!--android:layout_alignTop="@+id/imageView"-->
+        <!--android:layout_toLeftOf="@+id/imageButton"-->
+        <!--android:layout_toStartOf="@+id/imageButton" />-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/imageView3"-->
+        <!--android:src="@drawable/jacket"-->
+
+        <!--android:layout_alignTop="@+id/textView"-->
+        <!--android:layout_alignLeft="@+id/button2"-->
+        <!--android:layout_alignStart="@+id/button2" />-->
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Add clothes"-->
+        <!--android:id="@+id/button3"-->
+        <!--android:layout_alignTop="@+id/button2"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+</RelativeLayout>
